@@ -279,8 +279,10 @@ FR-017 se conserva para no perder el identificador histórico, pero su estado es
 | ID | Categoría y atributo | Requisito no funcional | Ámbito (Global/Local) | UR/FR relacionados | Método de comprobación | Estado |
 | --- | --- | --- | --- | --- | --- | --- |
 | NFR-01 |NFR-Q (Eficiencia; Escalabilidad; Mantenibilidad) |La plataforma mantendrá los objetivos de capacidad y rendimiento definidos para la primera versión sin intervención manual del personal de la organización.| G | -  | Prueba de carga automatizada con 100 usuarios concurrentes y 10 operaciones/s durante 30 min; comprobar mediante registros de monitorización, ausencia de intervención manual. | - | NFR-02 |NFR-Q (Usabilidad) |La plataforma proporcionará herramientas que ayuden a los pacientes a gestionar mejor su dieta, facilitando el acceso a la información.| G | - | - | - 
-| NFR-02 |NFR-Q (Usabilidad) |La plataforma proporcionará herramientas que ayuden a los pacientes a gestionar mejor su dieta, facilitando el acceso a la información.|G| - | - | -
-| NFR-03 |NFR-Q (Portabilidad, Seguridad) |El sistema deberá estar disponible desde distintos dispositivos, ordenador y móvil, priorizando un diseño web responsivo y seguro.|G| - | - | - 
+| NFR-02 |NFR-Q (Usabilidad) |El tiempo de aprendizaje para que un usuario nuevo realice una búsqueda de receta y acceda a su información no superará los 3 minutos sin asistencia externa.|L| - | - | -
+| NFR-03 |NFR-Q (Portabilidad, Seguridad) |La plataforma estará disponible desde distintos dispositivos, ordenador y móvil, priorizando un diseño web responsivo y seguro.|G| - | - | - 
+| NFR-04 |NFR-Q (Algo) | La interfaz de la plataforma debe ser 100% responsiva, adaptando su maquetación visual de forma automática a resoluciones de pantalla de ordenador (desktop) y dispositivos móviles (smartphone).|G| - | - | -
+| NFR-05 |NFR-Q (Seguridad) |Todas las comunicaciones entre los dispositivos de los usuarios y la plataforma deben realizarse bajo el protocolo cifrado HTTPS (TLS 1.3 o superior).|G| - | - | - 
 |
 
 Categorías y atributos: 
