@@ -223,21 +223,30 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 ### 6.1 Descripción detallada UC-05 — Actualizar perfil
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** UC-05, Actualizar perfil.
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** Poder modificar su perfil y conservar los cambios.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Actor principal: Usuario registrado.
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** El usuario dispone de una cuenta activa y una sesión iniciada.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** El usuario solicita actualizar su perfil.
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** 1- El usuario solicita actualizar su perfil.
+2- El sistema nuestra datos de consulta.
+3- El usuario modifica los datos editables que desee.
+4- El usuario solicita guardar los cambios.
+5- El sistema comprueba que los datos se han introducido correctamente.
+6- El sistema guarda los nuevos datos.
+7- El sistema confirma la modificación del perfil.
+8- El caso de uso finaliza.
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+**Extensiones (flujos alternativos):** *3a- El usuario cancela la edición en cualquier momento.
+Descartar los cambios sin guardar.
+Falta un dato obligatorio o hay datos no válidos.
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+**Postcondiciones:** Guardar todos los cambios en el sistema. Si el usuario cancela, el sistema debe descartar todos los cambios realizados hasta el momento.
 
 **Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
 
@@ -245,21 +254,42 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 ### 6.2 Descripción detallada UC-21 — Buscar recetas
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** UC-21, Buscar recetas.
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** Localizar una receta que cumpla sus criterios y consultar su detalle.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Principal: Usuario registrado.
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** El usuario dispone de una cuenta activa y una sesión iniciada.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** El usuario solicita localizar una receta que cumpla sus criterios o consultar detalle.
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** 
+1- El usuario solicita localizar una receta.
+2- El usuario especifica los datos que desee encontrar o excluir.
+3- El sistema verifica que la receta cumple todos los criterios especificados por el usuario.
+4- El sistema muestra los resultados por fecha de publicación, con las recetas más recientes primero.
+5- El sistema muestra para cada resultado una vista previa.
+6- El usuario consulta el detalle de la receta seleccionada.
+7- El usuario vuelve a ver los resultados.
+8- El caso de uso finaliza.
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+**Extensiones (flujos alternativos):** 3a* El usuario no indica ningún criterio:
+1. El sistema solicita un criterio.
+2. EL sistema conserva la búsqueda sin ejecutar.
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+5a* Si falta una imagen:
+1. El sistema indica que no hay imagen.
+5a.2.a* Si no hay valoraciones:
+1. El sistema indica que no hay valoraciones.
+2. El sistema no muestra un promedio de cero.
+
+7a* Si el usuario desea obtener otros resultados:
+1. El usuario modifica los criterios
+2. El usuario ejecuta otro búsqueda.
+3. El sistema muestra los resultados.
+
+**Postcondiciones:** 
 
 **Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
 
